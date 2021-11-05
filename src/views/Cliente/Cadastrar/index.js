@@ -3,11 +3,14 @@ import { Link } from "react-router-dom"
 import { useState } from "react/cjs/react.development"
 import axios from "axios";
 import { api } from "../../../config";
+import moment from "moment";
 
+const dataNascimento = moment("");
 
 export const CadCliente = () => {
 
     const [cliente, setCliente] = useState({
+        formSave: false,
         nome: '',
         endereco: '',
         cidade: '',
@@ -99,8 +102,8 @@ export const CadCliente = () => {
                 <FormGroup className="p-2">
                     <Label>Data de Nascimento </Label>
                     <Input
-                        name="data"
-                        placeholder="aaaa-mm-dd"
+                        name="nascimento"
+                        placeholder="Data de Nascimento: Ano-Mes-Dia"
                         type="text"
                         onChange={valorInput}
                     />
@@ -108,6 +111,7 @@ export const CadCliente = () => {
                 </FormGroup>
 
                 <Button type="submit" outline color="success">Cadastrar</Button>
+                <Button type="reset" outline color="success">Resetar</Button>
             </Form>
 
         </Container>

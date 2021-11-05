@@ -68,8 +68,9 @@ export const ItemCompra = (props) => {
                                 <td>{compras.quantidade}</td>
                                 <td>{compras.valor}</td>
                                 <td className="text-center/">
-                                <Link to ={"/editaritemcompra/"+compras.id}
+                                <Link to ={"/editarcompra/"+compras.id}
                                     className="btn btn-outline-warning btn-sm">Editar</Link>
+                                    
                          
                                     </td>
                             </tr>

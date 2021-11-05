@@ -88,7 +88,7 @@ export const ListarCompra = () => {
                                 <td className="text-center/">
                                     <Link to={"/listar-produtos/"+compra.id}
                                     className="btn btn-outline-primary btn-sm">
-                                    Consultar
+                                    Item Comprado
                                     </Link>
                                     <Link to ={"/editarcompra/"+compra.id}
                                     className="btn btn-outline-warning btn-sm">Editar</Link>
